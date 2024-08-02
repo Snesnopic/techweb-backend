@@ -9,7 +9,7 @@ class AnswerController {
       let decoded = null
       try {
          decoded = jwt.verify(token, process.env.JWT_SECRET);
-      } catch {
+      } catch (error){
         // This probably just means that the user isn't logged in, and should answer as Anonymous
         console.log("Error:".concat(error))
       }
