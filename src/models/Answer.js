@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../utils/db');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../utils/db");
 
 class Answer extends Model {}
 
@@ -21,13 +21,13 @@ Answer.init(
     nickname: {
       type: DataTypes.STRING,
       allowNull: false,
-      defaultValue: 'Anonymous',
+      defaultValue: "Anonymous",
     },
   },
   {
     sequelize,
-    tableName: 'answers',
-  }
+    tableName: "answers",
+  },
 );
 
 module.exports = Answer;

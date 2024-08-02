@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../utils/db');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../utils/db");
 
 class Question extends Model {}
 
@@ -15,16 +15,16 @@ Question.init(
       allowNull: false,
     },
     answers: {
-        type: DataTypes.TEXT,
-        allowNull: false,
-        get() {
-          const rawValue = this.getDataValue('answers');
-          return rawValue ? JSON.parse(rawValue) : [];
-        },
-        set(value) {
-          this.setDataValue('answers', JSON.stringify(value));
-        }
+      type: DataTypes.TEXT,
+      allowNull: false,
+      get() {
+        const rawValue = this.getDataValue("answers");
+        return rawValue ? JSON.parse(rawValue) : [];
       },
+      set(value) {
+        this.setDataValue("answers", JSON.stringify(value));
+      },
+    },
     correctanswer: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -32,9 +32,8 @@ Question.init(
   },
   {
     sequelize,
-    tableName: 'questions',
-  }
+    tableName: "questions",
+  },
 );
-
 
 module.exports = Question;
