@@ -1,7 +1,5 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../utils/db');
-const Quiz = require('./Quiz');
-const Answer = require('./Answer');
 
 class Question extends Model {}
 
