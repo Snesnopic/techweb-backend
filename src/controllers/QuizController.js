@@ -16,7 +16,7 @@ class QuizController {
       // Create each question and associated answers
       for (const questionData of questions) {
         // Create the question
-        const question = await Question.create({ 
+        await Question.create({ 
           answers: questionData.answers,
           question: questionData.questionText, 
           correctanswer: questionData.correctAnswer,
