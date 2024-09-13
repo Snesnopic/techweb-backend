@@ -27,3 +27,24 @@ risposta come appartenente all’utente “Anonymous”.
 4. Angular (Front-end framework)
 5. Marked (Front-end HTML and Markdown parser)
 All packages used are in the package.json file.
+
+# How to use
+Install [MySQL server](https://dev.mysql.com/doc/refman/8.4/en/installing.html)
+Run:
+```bash
+mysql -u root -p
+```
+Then
+```mysql
+CREATE USER 'smartquiz_dbuser'@'localhost' IDENTIFIED BY 'lupin';
+GRANT ALL PRIVILEGES ON * . * TO 'smartquiz_dbuser'@'localhost';
+FLUSH PRIVILEGES;
+CREATE DATABASE 'smartquiz';
+exit
+```
+Clone or download back-end repository
+```bash
+cd techweb-backend
+npm install
+npm run dev
+```
